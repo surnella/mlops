@@ -43,6 +43,7 @@ jobs:
       - name: Model Building
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          MLFLOW_TRACKING_URI: "https://vanda-unflaming-arlyne.ngrok-free.dev"
         run: python tourism_project/model_building/train.py
 
   deploy-hosting:

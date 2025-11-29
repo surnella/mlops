@@ -1,14 +1,7 @@
-# Core dependencies
 pandas==2.2.2
 huggingface_hub==0.32.6
 streamlit==1.43.2
 joblib==1.5.1
-
-# Match the training environment EXACTLY
 scikit-learn==1.7.2
 xgboost==3.1.2
-
-# You don’t need MLflow in a Streamlit inference Space
-# (only needed during training on your machine)
-# But if you want to keep it, it’s fine.
 mlflow==3.0.1

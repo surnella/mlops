@@ -17,7 +17,11 @@ from huggingface_hub import login, HfApi, create_repo
 from huggingface_hub.utils import RepositoryNotFoundError, HfHubHTTPError
 import mlflow
 
-mlflow.set_tracking_uri("http://localhost:5010")
+# USe this for local mlflow testing. 
+# mlflow.set_tracking_uri("http://localhost:5010")
+
+#Use this for hugging face to connect to my Mac. 
+mlflow.set_tracking_uri(public_url)
 mlflow.set_experiment("tourism_visit_with_us_production")
 
 api = HfApi()
