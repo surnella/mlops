@@ -70,13 +70,22 @@ preprocessor = make_column_transformer(
 xgb_model = xgb.XGBClassifier(scale_pos_weight=class_weight, random_state=42)
 
 # Define hyperparameter grid
+# param_grid = {
+#     'xgbclassifier__n_estimators': [50, 75, 100],
+#     'xgbclassifier__max_depth': [2, 3, 4],
+#     'xgbclassifier__colsample_bytree': [0.4, 0.5, 0.6],
+#     'xgbclassifier__colsample_bylevel': [0.4, 0.5, 0.6],
+#     'xgbclassifier__learning_rate': [0.01, 0.05, 0.1],
+#     'xgbclassifier__reg_lambda': [0.4, 0.5, 0.6],
+# }
+
+#Ngroc connectivity is failing intermittently. Hence reduce the GridSearchCV parameters for testing.
+# Define hyperparameter grid
 param_grid = {
-    'xgbclassifier__n_estimators': [50, 75, 100],
-    'xgbclassifier__max_depth': [2, 3, 4],
-    'xgbclassifier__colsample_bytree': [0.4, 0.5, 0.6],
-    'xgbclassifier__colsample_bylevel': [0.4, 0.5, 0.6],
-    'xgbclassifier__learning_rate': [0.01, 0.05, 0.1],
-    'xgbclassifier__reg_lambda': [0.4, 0.5, 0.6],
+    'xgbclassifier__n_estimators': [50, 100],
+    'xgbclassifier__max_depth': [2, 4],
+    'xgbclassifier__learning_rate': [0.01, 0.1],
+    'xgbclassifier__reg_lambda': [0.4, 0.6],
 }
 
 # Model pipeline
