@@ -21,7 +21,8 @@ import mlflow
 # mlflow.set_tracking_uri("http://localhost:5010")
 
 #Use this for hugging face to connect to my Mac. 
-mlflow.set_tracking_uri(public_url)
+tracking_uri = os.getenv("MLFLOW_TRACKING_URI", "file:./mlruns")
+mlflow.set_tracking_uri(tracking_uri)
 mlflow.set_experiment("tourism_visit_with_us_production")
 
 api = HfApi()
