@@ -1,0 +1,15 @@
+# Ignore MLflow run data and artifacts
+mlruns/
+.mlflow/
+mlflow-artifacts/
+artifacts/
+
+# Optional: common DB files sometimes used with MLflow tracking servers
+.env
+*.db
+*.sqlite
+
+# Useful extra ignores
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
