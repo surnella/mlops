@@ -23,7 +23,7 @@ import mlflow
 #Use this for hugging face to connect to my Mac. 
 tracking_uri = os.getenv("MLFLOW_TRACKING_URI", "file:./mlruns")
 mlflow.set_tracking_uri(tracking_uri)
-mlflow.set_experiment("tourism_visit_with_us_production")
+mlflow.set_experiment("tourism_visit_with_us")
 
 api = HfApi()
 
